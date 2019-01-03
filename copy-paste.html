@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>first angularjs app</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+        var app = angular.module("module", []);
+        app.controller('controller', function ($scope) {
+            $scope.copy=false;
+            $scope.cut=false;
+            $scope.paste=false;
+        
+            });
+</script>        
+</head>
+<body ng-app="module" ng-controller="controller">
+    <center>
+   copy of text <input type="text" ng-copy="copy=true" value="welcome to angularjs"/><br><br>
+        <span>text cut:{{copy}}</span><br><br>
+   cut of text  <input type="text" ng-cut="cut=true" value="welcome to nodejs"/><br><br>
+   <span>text cut:{{cut}}</span><br><br>
+   paste of text  <input type="text" ng-paste="paste=true" /><br><br>
+   <span>text cut:{{paste}}</span>
+ 
+   </div>
+    </center>
+</body>
+</html>
